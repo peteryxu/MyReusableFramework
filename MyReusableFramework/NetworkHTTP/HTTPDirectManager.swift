@@ -106,4 +106,62 @@ public class HTTPDirectManager {
         return responseData
     }
     
+    public static func patch(address: String, body:Data) -> Int {
+        
+        let headers =
+            ["Content-Type": "application/json;charset=UTF-8",  //from the consumes section
+                "Accept": "*/*" //from produces section
+        ]
+        
+        let url = URL(string: address)
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        //Creates an empty data buffer.
+        //var responseData = Data()
+        var responseStatus = 0
+        
+        var urlRequest = URLRequest(url: url!)
+        urlRequest.httpMethod = "PATCH"
+        urlRequest.httpBody = body
+        urlRequest.allHTTPHeaderFields = headers
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) {(data, response, error) in
+            //responseData = data!
+            responseStatus = ((response as? HTTPURLResponse)?.statusCode)!
+            semaphore.signal()
+        }
+        
+        task.resume()
+        semaphore.wait()
+        return responseStatus
+    }
+    
+    public static func delete(address: String) -> Int {
+        
+        /*let headers =
+         ["Content-Type": "application/json;charset=UTF-8",  //from the consumes section
+         "Accept": "application/json" //from produces section
+         ] */
+        
+        let url = URL(string: address)
+        let semaphore = DispatchSemaphore(value: 0)
+        
+        //Creates an empty data buffer.
+        var responseStatus = 0
+        
+        var urlRequest = URLRequest(url: url!)
+        urlRequest.httpMethod = "DELETE"
+        //urlRequest.httpBody = body
+        //urlRequest.allHTTPHeaderFields = headers
+        
+        let task = URLSession.shared.dataTask(with: urlRequest) {(data, response, error) in
+            responseStatus = ((response as? HTTPURLResponse)?.statusCode)!
+            semaphore.signal()
+        }
+        
+        task.resume()
+        semaphore.wait()
+        return responseStatus
+    }
+    
 }

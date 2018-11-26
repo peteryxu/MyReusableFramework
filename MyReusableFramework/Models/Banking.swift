@@ -21,10 +21,10 @@ import Foundation
  */
 
 public struct Account: Decodable {
-    let number: Int
-    let name: String
-    let bank: String
-    var transactions = [Transaction]()
+    public let number: Int
+    public let name: String
+    public let bank: String
+    public var transactions = [Transaction]()
     
     var total: Decimal {
         return transactions.reduce(0.0, { $0 + $1.amount * ($1.category == .income ? 1 : -1) })
@@ -39,6 +39,8 @@ public struct Account: Decodable {
         //self.transactions = [Transaction]()
         
     }
+    
+
     
     /*
      Omit properties from the CodingKeys enumeration if they won't be present when decoding instances, or if certain properties shouldn't be included in an encoded representation. A property omitted from CodingKeys needs a default value in order for its containing type to receive automatic conformance to Decodable or Codable.
@@ -55,6 +57,11 @@ public struct Account: Decodable {
 public struct Account2: Encodable {
     let name: String
     let bank: String
+    
+    public init(name: String, bank: String) {
+        self.name = name
+        self.bank = bank
+    }
 }
 
 public enum TransactionCategory: String, Codable {
