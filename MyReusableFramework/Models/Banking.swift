@@ -77,12 +77,12 @@ public enum TransactionCategory: String, Codable {
  [{"id":2,"amount":500,"description":"monthly for Oct","date":"2018-11-15T04:06:37.453Z","category":"income","accountId":1}]
  */
 public struct Transaction: Decodable {
-    let id = 0
+    public let id = 0
     public let amount: Decimal // In a real app that deals with money you should not use floating point numbers!
-    let description: String
-    let date: Date
-    let category: TransactionCategory
-    var accountId = 0
+    public let description: String
+    public let date: Date
+    public let category: TransactionCategory
+    public var accountId = 0
     
     /*
      init(amount: Float, description: String, date: Date, category: TransactionCategory) {
@@ -107,7 +107,9 @@ public struct Transaction: Decodable {
 
 public struct Transaction2: Encodable {
     //transaction id won't be know during creation, and was supplied by backend
-    //account id  is NOT in the payload,  included in the URI
+    //account id  is NOT in the payload,  included in the URI  if using AccountTransactionController
+     //account id  in the payload,  included in the URI  if using TransactionController
+    
     let amount: Decimal
     let description: String
     let date: Date
