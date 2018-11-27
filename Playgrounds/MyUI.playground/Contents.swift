@@ -8,8 +8,8 @@
 
 import UIKit
 import PlaygroundSupport
-import SwiftSpinner
-import Alamofire
+//import SwiftSpinner
+//import Alamofire
 import MyReusableFramework
 
 
@@ -36,11 +36,11 @@ class MyViewController : UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        SwiftSpinner.show("Connecting \nto satellite...")
+       /* SwiftSpinner.show("Connecting \nto satellite...")
         Alamofire.request("http://www.google.com").response { response in
             print(String(describing: response.response))
             SwiftSpinner.hide()
-        }
+        } */
     }
 }
 

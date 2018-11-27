@@ -26,7 +26,7 @@ public struct Account: Decodable {
     public let bank: String
     public var transactions = [Transaction]()
     
-    var total: Decimal {
+    public var total: Decimal {
         return transactions.reduce(0.0, { $0 + $1.amount * ($1.category == .income ? 1 : -1) })
     }
     

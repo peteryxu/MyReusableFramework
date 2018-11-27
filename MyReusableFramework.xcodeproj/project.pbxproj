@@ -17,6 +17,7 @@
 		85802D5521A6447D0075BDEB /* SwiftyPlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85802D5421A6447D0075BDEB /* SwiftyPlistManager.swift */; };
 		85802D5B21A65C890075BDEB /* FilePlistXMLManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85802D5A21A65C890075BDEB /* FilePlistXMLManager.swift */; };
 		85802D5D21A7243C0075BDEB /* HTTPDirectManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85802D5C21A7243C0075BDEB /* HTTPDirectManager.swift */; };
+		85D522D921ADAF6A00ABF318 /* CollectionsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85D522D821ADAF6A00ABF318 /* CollectionsUtils.swift */; };
 		85E0542021A3C8FC00CFA346 /* MyReusableFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85E0541621A3C8FC00CFA346 /* MyReusableFramework.framework */; };
 		85E0542521A3C8FC00CFA346 /* MyReusableFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85E0542421A3C8FC00CFA346 /* MyReusableFrameworkTests.swift */; };
 		85E0542721A3C8FC00CFA346 /* MyReusableFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 85E0541921A3C8FC00CFA346 /* MyReusableFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -48,6 +49,7 @@
 		85802D5C21A7243C0075BDEB /* HTTPDirectManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPDirectManager.swift; sourceTree = "<group>"; };
 		85802D6021A84BA80075BDEB /* Using-JSON-with-Custom-Types.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Using-JSON-with-Custom-Types.playground"; sourceTree = "<group>"; };
 		8596459B21A3CAFE007D789F /* MyAPI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyAPI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		85D522D821ADAF6A00ABF318 /* CollectionsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionsUtils.swift; sourceTree = "<group>"; };
 		85E0541621A3C8FC00CFA346 /* MyReusableFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MyReusableFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E0541921A3C8FC00CFA346 /* MyReusableFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyReusableFramework.h; sourceTree = "<group>"; };
 		85E0541A21A3C8FC00CFA346 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 			children = (
 				85802D5421A6447D0075BDEB /* SwiftyPlistManager.swift */,
 				85802D4B21A610EB0075BDEB /* ModelEncodeUtils.swift */,
+				85D522D821ADAF6A00ABF318 /* CollectionsUtils.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -325,6 +328,7 @@
 			files = (
 				85802D5121A635240075BDEB /* FileStorageManager.swift in Sources */,
 				85802D5321A63EE40075BDEB /* UserDefaultsManager.swift in Sources */,
+				85D522D921ADAF6A00ABF318 /* CollectionsUtils.swift in Sources */,
 				85802D4C21A610EB0075BDEB /* ModelEncodeUtils.swift in Sources */,
 				85802D5B21A65C890075BDEB /* FilePlistXMLManager.swift in Sources */,
 				85802D4821A5E8D10075BDEB /* Banking.swift in Sources */,
