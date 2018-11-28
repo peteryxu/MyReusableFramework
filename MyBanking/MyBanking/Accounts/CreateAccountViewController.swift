@@ -22,13 +22,13 @@ class CreateAccountViewController: UIViewController {
 		}
         
         let idString = numberTextField.text ?? "100"
-        let id = Int(idString)
+        let id = idString
         
         let nameString = nameTextField.text ?? ""
         let bankString = bankTextField.text ?? ""
         
-        let account = Account(number: id!, name: nameString, bank: bankString)
-        
+       // let account = Account(number: id!, name: nameString, bank: bankString)
+        let account = Account2(name: nameString, bank: bankString)
 		stateController.addAccount(account)
 	}
 }

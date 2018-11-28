@@ -15,27 +15,29 @@ class TransactionsViewController: UIViewController {
 	@IBOutlet weak var numberLabel: UILabel!
 	
 	var account: Account!
-    var selectedIndex: Int!
+    //var selectedIndex: Int!
 	var stateController: StateController!
 	
 	fileprivate var dataSource: TransactionsDataSource!
 	
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		numberLabel.text = String(account.number).accountNumberFormatting
+		numberLabel.text = account.id.accountNumberFormatting
 		navigationItem.title = account.name
 	}
 	
 	override func viewWillAppear(_ animated: Bool) {
 		super.viewWillAppear(animated)
 		totalLabel.text = account.total.dollarsFormatting
-        stateController.fetchTransactions(account.number)
-        
+        print("before fetch")
+        stateController.fetchTransactions(account.id)
+         print("after fetch")
         //reload account after fetching transactions
-        account = stateController.accounts[selectedIndex]
-        print("TransactionView: is account loaded with transactions \(account)")
+        //account = stateController.accounts[selectedIndex]
+        let trans = stateController.transDictionary[account.id]
+        print("TransactionView: is account loaded with transactions \(trans)")
         
-		dataSource = TransactionsDataSource(transactions: account.transactions)
+        dataSource = TransactionsDataSource(transactions: trans!)
 		tableView.dataSource = dataSource
 		tableView.reloadData()
 	}
@@ -44,7 +46,7 @@ class TransactionsViewController: UIViewController {
 		if let navigationController = segue.destination as? UINavigationController,
 			let createTransactionViewController = navigationController.viewControllers.first as? CreateTransactionViewController {
 			createTransactionViewController.delegate = self
-            createTransactionViewController.accountId = account.number
+            createTransactionViewController.accountId = account.id
 		}
 	}
 	
@@ -56,6 +58,6 @@ extension TransactionsViewController: CreateTransactionViewControllerDelegate {
 	func add(newTransaction: Transaction2) {
 		//account.transactions.append(newTransaction)
 		//stateController.update(account)
-        stateController.addTransaction(newTransaction, account.number)
+        stateController.addTransaction(newTransaction, account.id)
 	}
 }

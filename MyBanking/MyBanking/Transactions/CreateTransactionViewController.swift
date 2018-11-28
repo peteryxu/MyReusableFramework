@@ -16,7 +16,7 @@ protocol CreateTransactionViewControllerDelegate: class {
 class CreateTransactionViewController: UIViewController {
 	
 	weak var delegate: CreateTransactionViewControllerDelegate?
-    var accountId: Int?
+    var accountId = ""
 	
 	var newTransactionView: NewTransactionView {
 		return view as! NewTransactionView

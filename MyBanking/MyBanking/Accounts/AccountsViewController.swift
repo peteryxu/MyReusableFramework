@@ -35,7 +35,8 @@ class AccountsViewController: UIViewController {
 				let selectedIndex = tableView.indexPathForSelectedRow?.row {
 				let account = dataSource.accounts[selectedIndex]
 				transactionsViewController.account = account
-                transactionsViewController.selectedIndex = selectedIndex
+                print(account.id)
+                //transactionsViewController.selectedIndex = selectedIndex
 				transactionsViewController.stateController = stateController
 			}
 		default:

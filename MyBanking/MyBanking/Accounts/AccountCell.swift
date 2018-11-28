@@ -42,7 +42,7 @@ extension AccountCell {
 			name = account.name
 			total = account.total.dollarsFormatting
 			bank = account.bank
-			number = String(account.number).accountNumberFormatting
+			number = account.id.accountNumberFormatting
 			color = UIColor.color(for: index)
 		}
 	}
