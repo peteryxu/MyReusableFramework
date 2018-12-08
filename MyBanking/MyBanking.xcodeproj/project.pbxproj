@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		85733D7721AF348C003C8E23 /* Constrants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85733D7621AF348C003C8E23 /* Constrants.swift */; };
 		85AF459521ACDC99005DA14A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF459421ACDC99005DA14A /* AppDelegate.swift */; };
 		85AF459721ACDC99005DA14A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF459621ACDC99005DA14A /* ViewController.swift */; };
 		85AF459C21ACDC9B005DA14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85AF459B21ACDC9B005DA14A /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		85733D7621AF348C003C8E23 /* Constrants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrants.swift; sourceTree = "<group>"; };
 		85AF459121ACDC99005DA14A /* MyBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AF459421ACDC99005DA14A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AF459621ACDC99005DA14A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				85AF45BE21ACE062005DA14A /* StateController.swift */,
+				85733D7621AF348C003C8E23 /* Constrants.swift */,
 			);
 			path = StateAndServices;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				85AF45B121ACDF5F005DA14A /* AccountsDataSource.swift in Sources */,
 				85AF45C121ACE062005DA14A /* StateController.swift in Sources */,
 				85AF45BC21ACDFB5005DA14A /* TransactionCell.swift in Sources */,
+				85733D7721AF348C003C8E23 /* Constrants.swift in Sources */,
 				85AF45AE21ACDF5F005DA14A /* CreateAccountViewController.swift in Sources */,
 				85AF45C821ACE11C005DA14A /* Formatting.swift in Sources */,
 				85AF45B821ACDFB5005DA14A /* TransactionsDataSource.swift in Sources */,

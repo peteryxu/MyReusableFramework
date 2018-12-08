@@ -16,16 +16,15 @@ class StateController {
     
     public var accounts = [Account]()
     public var transDictionary = [String: [Transaction]]()
-
-    private let  host = "http://127.0.0.1:3000"
-    
-    //var transactions: [Transaction]
+    public var host = ""
     
     private init() {
         do {
-        print("init StateController")
+        host = MyAPI.LB4_API_HOST
+        print("API endpoint is: " + host)
         let getAccountsResponseData = HTTPDirectManager.query(address: host+"/accounts")
         self.accounts = try ModelEncodeUtils.getJsonDecoder().decode([Account].self, from: getAccountsResponseData)
+       
         print(self.accounts)
         } catch { print("Unexpected error: \(error)")}
     

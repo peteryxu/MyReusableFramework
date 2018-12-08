@@ -38,6 +38,7 @@
 		8503A70721A9A14C001DC8C3 /* MarkupBookTemplate.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = MarkupBookTemplate.rtf; sourceTree = "<group>"; };
 		850CA6C521A3CFAC008CFCC6 /* MyUI.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyUI.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		850CA6C621A4A9EE008CFCC6 /* MyMarkUp.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyMarkUp.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		85733D7821AF749A003C8E23 /* MyBLE.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyBLE.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		85802D4721A5E8D10075BDEB /* Banking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Banking.swift; sourceTree = "<group>"; };
 		85802D4921A5E94E0075BDEB /* Encode-peristence-http.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = "Encode-peristence-http.playground"; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
 		85802D4B21A610EB0075BDEB /* ModelEncodeUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelEncodeUtils.swift; sourceTree = "<group>"; };
@@ -134,6 +135,7 @@
 				850CA6C521A3CFAC008CFCC6 /* MyUI.playground */,
 				8596459B21A3CAFE007D789F /* MyAPI.playground */,
 				850CA6C621A4A9EE008CFCC6 /* MyMarkUp.playground */,
+				85733D7821AF749A003C8E23 /* MyBLE.playground */,
 			);
 			path = Playgrounds;
 			sourceTree = "<group>";
