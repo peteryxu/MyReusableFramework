@@ -8,11 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		85733D7721AF348C003C8E23 /* Constrants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85733D7621AF348C003C8E23 /* Constrants.swift */; };
+		8592727021BDC03500379BD9 /* MyReusableFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8592726F21BDC03500379BD9 /* MyReusableFramework.framework */; };
+		8592727121BDC03500379BD9 /* MyReusableFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 8592726F21BDC03500379BD9 /* MyReusableFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		85AF459521ACDC99005DA14A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF459421ACDC99005DA14A /* AppDelegate.swift */; };
 		85AF459721ACDC99005DA14A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF459621ACDC99005DA14A /* ViewController.swift */; };
 		85AF459C21ACDC9B005DA14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85AF459B21ACDC9B005DA14A /* Assets.xcassets */; };
 		85AF459F21ACDC9B005DA14A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AF459D21ACDC9B005DA14A /* LaunchScreen.storyboard */; };
-		85AF45A821ACDCE3005DA14A /* MyReusableFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85AF45A721ACDCE3005DA14A /* MyReusableFramework.framework */; };
 		85AF45AE21ACDF5F005DA14A /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF45AA21ACDF5E005DA14A /* CreateAccountViewController.swift */; };
 		85AF45AF21ACDF5F005DA14A /* AccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF45AB21ACDF5E005DA14A /* AccountCell.swift */; };
 		85AF45B021ACDF5F005DA14A /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85AF45AC21ACDF5E005DA14A /* AccountsViewController.swift */; };
@@ -29,8 +30,24 @@
 		85AF45CE21ACF9F5005DA14A /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85AF45CD21ACF9F5005DA14A /* Main2.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		8592727221BDC03600379BD9 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				8592727121BDC03500379BD9 /* MyReusableFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		85733D7621AF348C003C8E23 /* Constrants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constrants.swift; sourceTree = "<group>"; };
+		8592726B21BDC01C00379BD9 /* MyReusableFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyReusableFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8592726F21BDC03500379BD9 /* MyReusableFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyReusableFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AF459121ACDC99005DA14A /* MyBanking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyBanking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85AF459421ACDC99005DA14A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85AF459621ACDC99005DA14A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +78,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85AF45A821ACDCE3005DA14A /* MyReusableFramework.framework in Frameworks */,
+				8592727021BDC03500379BD9 /* MyReusableFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +88,8 @@
 		85AF458821ACDC99005DA14A = {
 			isa = PBXGroup;
 			children = (
+				8592726F21BDC03500379BD9 /* MyReusableFramework.framework */,
+				8592726B21BDC01C00379BD9 /* MyReusableFramework.framework */,
 				85AF459321ACDC99005DA14A /* MyBanking */,
 				85AF459221ACDC99005DA14A /* Products */,
 				85AF45A621ACDCE3005DA14A /* Frameworks */,
@@ -164,6 +183,7 @@
 				85AF458D21ACDC99005DA14A /* Sources */,
 				85AF458E21ACDC99005DA14A /* Frameworks */,
 				85AF458F21ACDC99005DA14A /* Resources */,
+				8592727221BDC03600379BD9 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -309,7 +329,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -364,7 +384,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -381,6 +401,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA386LD63J;
 				INFOPLIST_FILE = MyBanking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -399,6 +420,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YA386LD63J;
 				INFOPLIST_FILE = MyBanking/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

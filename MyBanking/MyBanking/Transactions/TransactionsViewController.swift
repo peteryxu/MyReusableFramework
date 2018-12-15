@@ -32,6 +32,7 @@ class TransactionsViewController: UIViewController {
         print("before fetch")
         stateController.fetchTransactions(account.id)
          print("after fetch")
+        
         //reload account after fetching transactions
         //account = stateController.accounts[selectedIndex]
         let trans = stateController.transDictionary[account.id]
